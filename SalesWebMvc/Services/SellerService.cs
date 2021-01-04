@@ -26,9 +26,16 @@ namespace SalesWebMvc.Services
             _context.SaveChanges();
         }
 
-        internal void Insert(SellerService seller)
+        public Seller FindById(int id)
         {
-            throw new NotImplementedException();
+            return _context.Seller.FirstOrDefault(obj => obj.Id == id);
+        }
+
+        public void Remove(int id)
+        {
+            var obj = _context.Seller.Find(id);
+            _context.Seller.Remove(obj);
+            _context.SaveChanges();
         }
     }
 }
