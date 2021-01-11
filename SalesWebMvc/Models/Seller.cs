@@ -14,7 +14,6 @@ namespace SalesWebMvc.Models
         public string Name { get; set; }
 
         [Required(ErrorMessage = "{0} required")]
-        [EmailAddress(ErrorMessage = "Enter a valid email")]
         [DataType(DataType.EmailAddress)]
         public string Email { get; set; }
 
