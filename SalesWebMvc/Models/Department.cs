@@ -25,7 +25,7 @@ namespace SalesWebMvc.Models
             Sellers.Add(seller);
         }
 
-        public double TotalSales(DateTime initial, DateTime final)
+        public double TotalSales(DateTime initial, DateTime final) //This metod is evocad in \Views\SalesRecord file GroupingSearch
         {
             return Sellers.Sum(seller => seller.TotalSales(initial, final));
         }
